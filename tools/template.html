@@ -29,9 +29,17 @@ label{display:flex;gap:6px;align-items:center;color:var(--mut)}
 #info .lnk:hover{text-decoration:underline}
 #info .ft{margin-top:8px;color:var(--mut);font-size:12px}
 #hint{position:fixed;right:12px;bottom:12px;color:var(--mut);font-size:12px}
+#warn{border:1px solid var(--sel);color:var(--sel);background:none;border-radius:9px;padding:2px 9px;font:600 12px system-ui,sans-serif;cursor:pointer;white-space:nowrap}
+#notice{position:fixed;inset:0;z-index:5;display:flex;align-items:center;justify-content:center;padding:16px;background:#000a}
+#notice[hidden]{display:none}
+#notice>div{background:var(--panel);border:2px solid var(--sel);border-radius:10px;padding:18px 20px;max-width:560px;max-height:calc(100vh - 32px);overflow:auto;line-height:1.5;box-sizing:border-box}
+#notice h2{margin:0 0 8px;font-size:18px;color:var(--sel)}
+#notice p{margin:8px 0} #notice a{color:var(--acc)}
+#notice button{margin-top:8px;padding:8px 16px;border:0;border-radius:6px;background:var(--sel);color:#fff;font:600 14px system-ui,sans-serif;cursor:pointer}
 @media (max-width:700px){#hint{display:none}}
 </style></head><body>
 <div id="bar"><b id="ttl">Boardview</b>
+<button id="warn" title="Read the disclaimer">⚠ Unofficial · incomplete</button>
 <span class="seg"><button id="sF" class="on">Top</button><button id="sB">Bottom</button></span>
 <input id="q" type="text" placeholder="Search ref, value or net…" autocomplete="off">
 <span id="photoctl" style="display:flex;gap:10px"><label><input type="checkbox" id="photo"> photo</label><label>opacity <input type="range" id="op" min="0" max="100" value="85"></label></span>
@@ -44,6 +52,22 @@ label{display:flex;gap:6px;align-items:center;color:var(--mut)}
 <label><input type="checkbox" id="unk"> highlight unidentified (REF**, R?)</label>
 <span id="cnt" style="color:var(--mut)"></span></div>
 <canvas id="c"></canvas><div id="info"></div>
+<div id="notice" role="dialog" aria-modal="true" aria-labelledby="ntitle"><div>
+<h2 id="ntitle">⚠ Unofficial, incomplete and possibly wrong</h2>
+<p><b>Not official.</b> This boardview is not made, endorsed or checked by Raspberry Pi Ltd, and is not based on
+official schematics or layout files. "Raspberry Pi" is a trademark of Raspberry Pi Ltd; this project is not affiliated
+with it.</p>
+<p><b>Made by a hobbyist.</b> It was reverse engineered by an untrained hobbyist from photos and multimeter probing,
+not by an electronics professional.</p>
+<p><b>Incomplete and possibly wrong.</b> Many parts are unidentified and most nets are untraced. Positions, values,
+part numbers and connections may be wrong, and your board revision may differ.</p>
+<p><b>Use at your own risk.</b> Board-level repair can destroy hardware and can be dangerous. Check everything against
+your own board, your own measurements and the manufacturers' datasheets before you solder or apply power. Provided
+"as is" with no warranty of any kind; the authors and contributors accept no liability for any damage or injury.</p>
+<p>Found a mistake? Corrections are welcome at
+<a href="https://github.com/dpetzel/pi5-boardview" target="_blank" rel="noopener">github.com/dpetzel/pi5-boardview</a>.</p>
+<button id="ack">I understand</button>
+</div></div>
 <div id="hint">scroll / pinch = zoom · drag = pan · double-click = fit · F = flip side</div>
 <script>
 /*DATA*/
@@ -158,7 +182,10 @@ function setSide(s){if(s===side)return;const at=selVia&&S(selVia[0],selVia[1])[0
  side=s;$('sF').classList.toggle('on',s==='F');$('sB').classList.toggle('on',s==='B');
  if(selVia)ox=at-mir()*selVia[0]*sc;else fit();draw();}
 $('sF').onclick=()=>setSide('F');$('sB').onclick=()=>setSide('B');
-addEventListener('keydown',e=>{if(e.target.tagName==='INPUT')return;if(e.key==='f'||e.key==='F')setSide(side==='F'?'B':'F');});
+{const N=$('notice');let seen=false;try{seen=localStorage.getItem('bv-notice')==='1';}catch(e){}
+N.hidden=seen;$('warn').onclick=()=>{N.hidden=false;$('ack').focus();};
+$('ack').onclick=()=>{N.hidden=true;try{localStorage.setItem('bv-notice','1');}catch(e){}};if(!seen)$('ack').focus();}
+addEventListener('keydown',e=>{if(e.target.tagName==='INPUT')return;if(!$('notice').hidden)return;if(e.key==='f'||e.key==='F')setSide(side==='F'?'B':'F');});
 const ptr=new Map();let drag=null,pinch=null;
 cv.onpointerdown=e=>{cv.setPointerCapture(e.pointerId);ptr.set(e.pointerId,[e.clientX,e.clientY]);
  if(ptr.size===1)drag={x:e.clientX,y:e.clientY,ox,oy,m:false};else if(ptr.size===2){drag=null;const[a,b]=[...ptr.values()];pinch={d:Math.hypot(a[0]-b[0],a[1]-b[1]),sc};}cv.style.cursor='grabbing';};

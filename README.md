@@ -3,6 +3,18 @@
 A KiCad 10 reconstruction of the Raspberry Pi 5 board (part placement, part identification, nets traced from the
 real board), published as an interactive boardview for repair work.
 
+> [!WARNING]
+> **Unofficial, incomplete and possibly wrong.**
+> * **Not official.** Not made, endorsed or checked by Raspberry Pi Ltd, and not based on official schematics or layout
+>   files. "Raspberry Pi" is a trademark of Raspberry Pi Ltd; this project is not affiliated with it.
+> * **Made by a hobbyist.** Reverse engineered by an untrained hobbyist from photos and multimeter probing, not by an
+>   electronics professional.
+> * **Incomplete and possibly wrong.** Many parts are unidentified and most nets are untraced. Positions, values, part
+>   numbers and connections may be wrong, and your board revision may differ.
+> * **Use at your own risk.** Board-level repair can destroy hardware and can be dangerous. Check everything against
+>   your own board, your own measurements and the manufacturers' datasheets before you solder or apply power. Provided
+>   "as is" with no warranty of any kind; the authors and contributors accept no liability for any damage or injury.
+
 * **View it:** <https://dpetzel.github.io/pi5-boardview/>, rebuilt from `main` on every push
 * **Download:** `pi5-boardview.html` (self-contained, works offline) and `pi5.brd` (for
   [OpenBoardView](https://github.com/OpenBoardView/OpenBoardView)) from the [releases](../../releases)
@@ -53,3 +65,4 @@ Push a tag such as `v1.0` and CI attaches that build's `pi5-boardview.html` and 
 ## License
 
 [CC-BY-SA-4.0](LICENSE): share and adapt with attribution, and publish adaptations under the same license.
+The license's disclaimer of warranties and limitation of liability apply in full.
