@@ -1,0 +1,86 @@
+(footprint "L_Bourns_SRN2012"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 -0.5 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "1b1143dd-b559-4eba-bc9a-0772c0862b23")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "L_Bourns_SRN2012"
+		(at 0 1 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "f8fe16f9-ef67-4c2b-aa20-78c09e8f4d88")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "https://www.mouser.com/datasheet/3/40/1/SRN2012.pdf"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "0b825888-cf87-4d03-b9a9-153380bd3f31")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "SRN2012-R47M"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "5b284abf-f6bd-4260-a2cf-32a5aa9fddfe")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_rect
+		(start -1 -0.8)
+		(end 1 0.6)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "09db4ab4-720e-49bd-af9c-f0430beb292f")
+	)
+	(pad "1" smd roundrect
+		(at -0.699998 -0.1)
+		(size 0.534996 1.2)
+		(layers "F.Cu" "F.Mask")
+		(roundrect_rratio 0.15)
+		(uuid "c0991a3f-ec5a-42d7-8654-f0dceb50bd83")
+	)
+	(pad "2" smd roundrect
+		(at 0.699999 0)
+		(size 0.534998 1.2)
+		(layers "F.Cu" "F.Mask")
+		(roundrect_rratio 0.15)
+		(uuid "cdbc6bbf-9ef8-4123-8e9c-a3d01507962f")
+	)
+	(embedded_fonts no)
+)

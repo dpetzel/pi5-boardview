@@ -1,0 +1,127 @@
+(footprint "FPF1320"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 -0.5 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "9cd87bff-eb28-4853-91de-8cde53f2ace0")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "FPF1320"
+		(at 0 1 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "03d0317b-e5ba-4730-874c-97bad4215f8e")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "https://www.onsemi.com/pdf/datasheet/fpf1321-d.pdf"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "847779ca-9cfd-4915-9208-80c60a08b97e")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "Power Switch ICs - Power Distribution Dual In Signal Out Advance Power Switch"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "e5b590d7-ce41-443b-b2ca-7f2cc482b8c8")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_rect
+		(start -0.43 -0.68)
+		(end 0.43 0.68)
+		(stroke
+			(width 0.025)
+			(type default)
+		)
+		(fill no)
+		(layer "Margin")
+		(uuid "abbb8578-a929-41fd-adb4-731d1304288a")
+	)
+	(fp_text user "REF**"
+		(at -0.43 -0.74 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "e0f7aaba-194f-46ae-8b49-9a7f1190863d")
+		(effects
+			(font
+				(size 0.25 0.25)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
+	(pad "A1" smd circle
+		(at -0.25 -0.5)
+		(size 0.25 0.25)
+		(layers "F.Cu" "F.Mask")
+		(thermal_bridge_angle 90)
+		(uuid "4d82a89a-7f86-467f-9682-7ae16ea1c417")
+	)
+	(pad "A2" smd circle
+		(at 0.25 -0.5)
+		(size 0.25 0.25)
+		(layers "F.Cu" "F.Mask")
+		(thermal_bridge_angle 90)
+		(uuid "872ae2a0-4af8-4d24-bf4a-2c2df1afa83d")
+	)
+	(pad "B1" smd circle
+		(at -0.25 0)
+		(size 0.25 0.25)
+		(layers "F.Cu" "F.Mask")
+		(thermal_bridge_angle 90)
+		(uuid "3871ad5c-107a-42ee-a794-358513be904e")
+	)
+	(pad "B2" smd circle
+		(at 0.25 0)
+		(size 0.25 0.25)
+		(layers "F.Cu" "F.Mask")
+		(thermal_bridge_angle 90)
+		(uuid "f5e7782b-cf32-4428-b443-f3e2323ce5ca")
+	)
+	(pad "C1" smd circle
+		(at -0.25 0.5)
+		(size 0.25 0.25)
+		(layers "F.Cu" "F.Mask")
+		(thermal_bridge_angle 90)
+		(uuid "9b642153-c5b1-470f-9a31-b0b6ee98c1cc")
+	)
+	(pad "C3" smd circle
+		(at 0.25 0.5)
+		(size 0.25 0.25)
+		(layers "F.Cu" "F.Mask")
+		(thermal_bridge_angle 90)
+		(uuid "5724ee38-67f0-4ecc-9af4-68bbe66f4236")
+	)
+	(embedded_fonts no)
+)

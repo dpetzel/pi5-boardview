@@ -1,0 +1,5 @@
+(fp_lib_table
+	(version 7)
+	(lib (name "PI5") (type "") (uri "${KIPRJMOD}/pi5.pretty") (options "") (descr ""))
+	(lib (name "pi5") (type "KiCad") (uri "${KIPRJMOD}/pi5.pretty") (options "") (descr ""))
+)

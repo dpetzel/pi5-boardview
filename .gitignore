@@ -1,0 +1,16 @@
+# KiCad lock files and local state
+~*.lck
+*.kicad_prl
+fp-info-cache
+*-bak
+*.bak
+
+# KiCad / editor backups
+pi5-backups/
+_restore_backup_*/
+.history/
+
+# Generated boardview (built by CI: GitHub Pages + release assets; locally: tools/boardview.py)
+boardview/*.html
+boardview/*.brd
+__pycache__/

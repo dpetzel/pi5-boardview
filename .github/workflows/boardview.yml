@@ -1,0 +1,71 @@
+# Builds the boardview (HTML viewer + OpenBoardView .brd) from pi5.kicad_pcb.
+#   pull request  -> files attached to the run as the "boardview" artifact, for review
+#   push to main  -> deployed to GitHub Pages
+#   tag v*        -> attached to a GitHub Release
+name: boardview
+
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: boardview-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: kicad/kicad:10.0
+      options: --user root
+    steps:
+      - uses: actions/checkout@v4
+      - name: Export boardview
+        run: |
+          python3 tools/boardview.py pi5.kicad_pcb -o _site
+          cp _site/pi5-boardview.html _site/index.html
+      - uses: actions/upload-artifact@v4
+        with:
+          name: boardview
+          path: |
+            _site/pi5-boardview.html
+            _site/pi5.brd
+      - if: github.ref == 'refs/heads/main'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    if: github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
+
+  release:
+    if: startsWith(github.ref, 'refs/tags/v')
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: boardview
+      - name: Create release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release create "$GITHUB_REF_NAME" pi5-boardview.html pi5.brd --repo "$GITHUB_REPOSITORY" --generate-notes
