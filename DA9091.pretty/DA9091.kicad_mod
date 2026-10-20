@@ -3,6 +3,8 @@
 	(generator "pcbnew")
 	(generator_version "10.0")
 	(layer "F.Cu")
+	(descr "DA9091 PMIC (QFN-71, 6x6 mm, 0.4 mm pitch). Pad geometry from U5 in schlae/cm5-reveng (https://github.com/schlae/cm5-reveng), CC BY-SA 4.0; pad numbers left blank on purpose: no public datasheet to confirm pin 1")
+	(tags "DA9091 PMIC QFN")
 	(property "Reference" "U5"
 		(at 0 0 0)
 		(layer "F.SilkS")

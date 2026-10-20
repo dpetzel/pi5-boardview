@@ -59,6 +59,13 @@ Both write `boardview/pi5-boardview.html` and `boardview/pi5.brd`. Options: `-o 
 `--kicad-nets-only` (skip nets derived from copper; see the notes at the top of `tools/boardview.py`).
 KiCad exports the last *saved* board, so save before building.
 
+## Credits
+
+The DA9091 PMIC footprint (`DA9091.pretty`, U5) uses the pad geometry from
+[schlae/cm5-reveng](https://github.com/schlae/cm5-reveng), a reverse-engineered Raspberry Pi Compute Module 5,
+licensed [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). Its pad numbers are left blank here on
+purpose: the DA9091 has no public datasheet to confirm where pin 1 is.
+
 ## License
 
 [CC-BY-SA-4.0](LICENSE): share and adapt with attribution, and publish adaptations under the same license.
