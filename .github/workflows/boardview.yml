@@ -1,13 +1,11 @@
 # Builds the boardview (HTML viewer + OpenBoardView .brd) from pi5.kicad_pcb.
 #   pull request  -> files attached to the run as the "boardview" artifact, for review
 #   push to main  -> deployed to GitHub Pages
-#   tag v*        -> attached to a GitHub Release
 name: boardview
 
 on:
   push:
     branches: [main]
-    tags: ['v*']
   pull_request:
   workflow_dispatch:
 
@@ -54,18 +52,3 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v5
-
-  release:
-    if: startsWith(github.ref, 'refs/tags/v')
-    needs: build
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    steps:
-      - uses: actions/download-artifact@v8
-        with:
-          name: boardview
-      - name: Create release
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: gh release create "$GITHUB_REF_NAME" pi5-boardview.html pi5.brd --repo "$GITHUB_REPOSITORY" --generate-notes
