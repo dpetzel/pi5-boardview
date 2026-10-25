@@ -11894,7 +11894,7 @@
 	(footprint ""
 		(layer "F.Cu")
 		(uuid "78c10490-4609-443c-a276-a17142838a38")
-		(at 115.51 86.19)
+		(at 115.51 86.23)
 		(property "Reference" ""
 			(at 0 0 0)
 			(layer "F.SilkS")
@@ -213318,12 +213318,28 @@
 		(uuid "c8d14a36-65cd-46cf-bd96-c8364368218f")
 	)
 	(segment
+		(start 109.3 87.46)
+		(end 109.3 87.680001)
+		(width 0.1)
+		(layer "B.Cu")
+		(net "SD_SW_DETECT")
+		(uuid "0bd5cd5d-968e-4b8d-93f6-a37b6b12e9a3")
+	)
+	(segment
 		(start 115.5 85.85)
 		(end 115.5 86.23)
 		(width 0.1)
 		(layer "B.Cu")
 		(net "SD_SW_DETECT")
 		(uuid "2a230652-d123-461e-869c-36337a707b63")
+	)
+	(segment
+		(start 115.11 86.23)
+		(end 114.03 85.15)
+		(width 0.1)
+		(layer "B.Cu")
+		(net "SD_SW_DETECT")
+		(uuid "2ab7ce6b-0c28-4801-b832-46502591eaeb")
 	)
 	(segment
 		(start 116.38 85.65)
@@ -213364,6 +213380,30 @@
 		(layer "B.Cu")
 		(net "SD_SW_DETECT")
 		(uuid "77604440-9c5a-4f39-9347-e543c2f456d3")
+	)
+	(segment
+		(start 115.51 86.23)
+		(end 115.11 86.23)
+		(width 0.1)
+		(layer "B.Cu")
+		(net "SD_SW_DETECT")
+		(uuid "988da5df-e5c6-4aeb-ad2b-79732b6500ea")
+	)
+	(segment
+		(start 111.61 85.15)
+		(end 109.3 87.46)
+		(width 0.1)
+		(layer "B.Cu")
+		(net "SD_SW_DETECT")
+		(uuid "c2055f8e-329b-4962-bd11-25526394b4cc")
+	)
+	(segment
+		(start 114.03 85.15)
+		(end 111.61 85.15)
+		(width 0.1)
+		(layer "B.Cu")
+		(net "SD_SW_DETECT")
+		(uuid "c5a221a1-22be-4aac-9e2e-d305cbb9698e")
 	)
 	(segment
 		(start 116.69 85.96)
