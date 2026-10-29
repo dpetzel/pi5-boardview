@@ -29721,16 +29721,15 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "Capacitor_SMD:C_0603_1608Metric"
+	(footprint "Capacitor_SMD:C_0402_1005Metric"
 		(layer "B.Cu")
 		(uuid "15cd5331-4dbf-4cf7-a781-729fc9505cce")
-		(at 121.98 99.55 -90)
-		(descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
+		(at 121.91 99.53 -90)
+		(descr "Capacitor SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "capacitor")
 		(property "Reference" "REF**"
-			(at 0 1.43 90)
+			(at 0 1.16 90)
 			(layer "B.SilkS")
-			(hide yes)
 			(uuid "10fb582d-d909-4c02-829e-f1fd31b29fbe")
 			(effects
 				(font
@@ -29740,8 +29739,8 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "C_0603_1608Metric"
-			(at 0 -1.43 90)
+		(property "Value" "4u7"
+			(at 0 -1.16 90)
 			(layer "B.Fab")
 			(uuid "d1aba4d2-01e9-46cb-b17d-341fbfbec62f")
 			(effects
@@ -29789,21 +29788,39 @@
 				(justify mirror)
 			)
 		)
+		(property "Notes" "Capacitor, MLCC, 4u7, M1005, 6.3V, 20%, X5R"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "73ef00bc-945d-400d-b825-45efa1279272")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Source" "https://forums.raspberrypi.com/viewtopic.php?t=401457#p2391172"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "18c53c90-f4b5-4c82-afda-73e94bb09607")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
-			(start -0.14058 0.51)
-			(end 0.14058 0.51)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "B.SilkS")
-			(uuid "95a59ae1-e361-4c6d-9f53-27f3ba2633ce")
-		)
-		(fp_line
-			(start -0.14058 -0.51)
-			(end 0.14058 -0.51)
+			(start -0.107836 0.36)
+			(end 0.107836 0.36)
 			(stroke
 				(width 0.12)
 				(type solid)
@@ -29811,9 +29828,19 @@
 			(layer "B.SilkS")
 			(uuid "a75390fc-fd81-46af-88a4-cbf646a1034e")
 		)
+		(fp_line
+			(start -0.107836 -0.36)
+			(end 0.107836 -0.36)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "B.SilkS")
+			(uuid "95a59ae1-e361-4c6d-9f53-27f3ba2633ce")
+		)
 		(fp_rect
-			(start -1.48 0.73)
-			(end 1.48 -0.73)
+			(start -0.91 0.46)
+			(end 0.91 -0.46)
 			(stroke
 				(width 0.05)
 				(type solid)
@@ -29823,8 +29850,8 @@
 			(uuid "56c81ab8-9b2d-4e40-9353-82d0272e4045")
 		)
 		(fp_rect
-			(start -0.8 0.4)
-			(end 0.8 -0.4)
+			(start -0.5 0.25)
+			(end 0.5 -0.25)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -29839,28 +29866,28 @@
 			(uuid "d26b1eab-7472-4c5d-8aad-62a771e49a77")
 			(effects
 				(font
-					(size 0.4 0.4)
-					(thickness 0.06)
+					(size 0.25 0.25)
+					(thickness 0.04)
 				)
 				(justify mirror)
 			)
 		)
 		(pad "1" smd roundrect
-			(at -0.775 0 270)
-			(size 0.9 0.95)
+			(at -0.48 0 270)
+			(size 0.56 0.62)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(roundrect_rratio 0.25)
 			(uuid "04b44eec-d293-4b43-81e8-92198eefbc6b")
 		)
 		(pad "2" smd roundrect
-			(at 0.775 0 270)
-			(size 0.9 0.95)
+			(at 0.48 0 270)
+			(size 0.56 0.62)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(roundrect_rratio 0.25)
 			(uuid "9d287964-6aa8-4ea9-97ec-177571a86fba")
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step"
+		(model "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -41185,6 +41212,164 @@
 		)
 		(embedded_fonts no)
 	)
+	(footprint "Inductor_SMD:L_0402_1005Metric"
+		(layer "B.Cu")
+		(uuid "905911ee-b539-45f0-ab0b-9f29d108fc4c")
+		(at 132.97 102.76 180)
+		(descr "Inductor SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf)")
+		(tags "inductor")
+		(property "Reference" "REF**"
+			(at 0 1.17 0)
+			(layer "B.SilkS")
+			(uuid "7c70508f-2b85-4b32-9741-1fd09aa5cefd")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Value" "L_0402_1005Metric"
+			(at 0 -1.17 0)
+			(layer "B.Fab")
+			(uuid "76c077e0-023d-4e2b-bdf4-7ad71bc424ba")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "3acb5b8d-390a-4b99-8a73-232719e8685e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "c9dd9b43-3179-452a-b875-26d376fa6d5e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify mirror)
+			)
+		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 0 0 0)
+			(layer "B.SilkS")
+			(hide yes)
+			(uuid "fc364a67-1d56-4c51-b19b-b6073f4ad9ca")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Notes" "Ferrite Bead, M1005, 600R@100MHz, 230mR, 900mA"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "76c0ca47-6d57-4bc7-9426-c6009eff2265")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Source" "https://forums.raspberrypi.com/viewtopic.php?t=401457#p2391173"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "52d9aa64-c2ef-4d26-a04c-8645c25c92e2")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(attr smd)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_rect
+			(start -0.93 0.47)
+			(end 0.93 -0.47)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(fill no)
+			(layer "B.CrtYd")
+			(uuid "a5d96596-43a6-4c1a-81f8-3d631bc0b3e9")
+		)
+		(fp_rect
+			(start -0.5 0.25)
+			(end 0.5 -0.25)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(fill no)
+			(layer "B.Fab")
+			(uuid "5174120c-476e-4818-adf2-84c3e9e8eb85")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 0)
+			(layer "B.Fab")
+			(uuid "b37182ca-3799-4a5e-b186-6728152a178a")
+			(effects
+				(font
+					(size 0.25 0.25)
+					(thickness 0.04)
+				)
+				(justify mirror)
+			)
+		)
+		(pad "1" smd roundrect
+			(at -0.485 0 180)
+			(size 0.59 0.64)
+			(layers "B.Cu" "B.Mask" "B.Paste")
+			(roundrect_rratio 0.25)
+			(uuid "61cc55f3-7589-4408-8799-0b594623c74a")
+		)
+		(pad "2" smd roundrect
+			(at 0.485 0 180)
+			(size 0.59 0.64)
+			(layers "B.Cu" "B.Mask" "B.Paste")
+			(roundrect_rratio 0.25)
+			(uuid "0db0add0-74c8-4f88-9943-f5294afdf0f2")
+		)
+		(embedded_fonts no)
+		(model "${KICAD10_3DMODEL_DIR}/Inductor_SMD.3dshapes/L_0402_1005Metric.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+	)
 	(footprint "Capacitor_SMD:C_0402_1005Metric"
 		(layer "B.Cu")
 		(uuid "91638d66-1c73-4ab3-b4af-72bd3a2e7a8d")
@@ -42744,6 +42929,178 @@
 		)
 		(embedded_fonts no)
 		(model "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+	)
+	(footprint "Capacitor_SMD:C_0201_0603Metric"
+		(layer "B.Cu")
+		(uuid "ad88c4ab-09ce-4216-bdad-0255f3cabe36")
+		(at 131.84 103.71 90)
+		(descr "Capacitor SMD 0201 (0603 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: https://www.vishay.com/docs/20052/crcw0201e3.pdf)")
+		(tags "capacitor")
+		(property "Reference" "REF**"
+			(at 0 1.05 90)
+			(layer "B.SilkS")
+			(uuid "9125b9a0-1dc5-41bc-a4d1-b3716aa5c546")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Value" "10n"
+			(at 0 -1.05 90)
+			(layer "B.Fab")
+			(uuid "72183d7d-c67d-4e51-8016-98bbee220a1a")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 90)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "18e5af19-3c97-46a6-a666-0914875bf6d0")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 90)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "61c78003-cf6d-428e-8c92-3f8622221aef")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify mirror)
+			)
+		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 0 0 90)
+			(layer "B.SilkS")
+			(hide yes)
+			(uuid "5fc536db-ac16-4538-9b16-cebe665a309f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Notes" "Capacitor, MLCC, 10n, M0603, 10V, 10%, X7R"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "eaf31dc8-9e75-4548-82f0-f518f6ebbcaf")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Source" "https://forums.raspberrypi.com/viewtopic.php?t=401457#p2391172"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "083970cc-e30f-48a5-9c26-14d3fb0127e7")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(attr smd)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_rect
+			(start -0.7 0.35)
+			(end 0.7 -0.35)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(fill no)
+			(layer "B.CrtYd")
+			(uuid "c476696f-47d5-4052-8e2b-8aac76c0641e")
+		)
+		(fp_rect
+			(start -0.3 0.15)
+			(end 0.3 -0.15)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(fill no)
+			(layer "B.Fab")
+			(uuid "0c783f9e-7197-4d83-8180-e2381f18ce88")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0.68 90)
+			(layer "B.Fab")
+			(uuid "fa9489c5-40e6-4a62-88e4-40ddbee2b173")
+			(effects
+				(font
+					(size 0.25 0.25)
+					(thickness 0.04)
+				)
+				(justify mirror)
+			)
+		)
+		(pad "" smd roundrect
+			(at -0.345 0 90)
+			(size 0.318 0.36)
+			(layers "B.Paste")
+			(roundrect_rratio 0.25)
+			(uuid "1aeca0d2-1f38-4cd2-a3d7-bb93264ea187")
+		)
+		(pad "" smd roundrect
+			(at 0.345 0 90)
+			(size 0.318 0.36)
+			(layers "B.Paste")
+			(roundrect_rratio 0.25)
+			(uuid "75a13de0-47c5-46ab-8ba6-79afcc513d5f")
+		)
+		(pad "1" smd roundrect
+			(at -0.32 0 90)
+			(size 0.46 0.4)
+			(layers "B.Cu" "B.Mask")
+			(roundrect_rratio 0.25)
+			(uuid "aa3e85fa-b823-4bce-b47b-7a0250c43bfe")
+		)
+		(pad "2" smd roundrect
+			(at 0.32 0 90)
+			(size 0.46 0.4)
+			(layers "B.Cu" "B.Mask")
+			(roundrect_rratio 0.25)
+			(uuid "66e65f7a-4531-40cb-8500-e59993afe354")
+		)
+		(embedded_fonts no)
+		(model "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0201_0603Metric.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -44771,7 +45128,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "C_0402_1005Metric"
+		(property "Value" "15u"
 			(at 0 -1.16 0)
 			(layer "B.Fab")
 			(uuid "bd0de98d-d274-46ca-ae5a-838016591359")
@@ -44812,6 +45169,34 @@
 			(layer "B.SilkS")
 			(hide yes)
 			(uuid "fc23034d-6e27-4613-94c4-c851547ea645")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Notes" "Capacitor, MLCC, 15u, M1005, 6.3V, 20%, X5R"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "85746982-4a51-4869-ae57-f2bec44f9d6e")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Source" "https://forums.raspberrypi.com/viewtopic.php?t=401457#p2391173"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "238c7628-99a9-4aaf-8ee3-a81740982b28")
 			(effects
 				(font
 					(size 1 1)
@@ -47027,7 +47412,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "C_0402_1005Metric"
+		(property "Value" "15u"
 			(at 0 -1.16 0)
 			(layer "B.Fab")
 			(uuid "95f75cf7-0a1e-4b56-a412-5e3fd7de2f38")
@@ -47068,6 +47453,34 @@
 			(layer "B.SilkS")
 			(hide yes)
 			(uuid "6ef214b2-37f0-4def-b012-71bdee5df5aa")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Source" "https://forums.raspberrypi.com/viewtopic.php?t=401457#p2391173"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "69388e4a-c492-4e29-8a9f-c1ee5f723b9a")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Notes" "Capacitor, MLCC, 15u, M1005, 6.3V, 20%, X5R"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "b6caecbb-a5a5-4326-b1d1-b0f7f7cdc56b")
 			(effects
 				(font
 					(size 1 1)
@@ -47586,6 +47999,178 @@
 			(layers "B.Cu" "B.Mask")
 			(roundrect_rratio 0.25)
 			(uuid "4e4ea60d-f3ea-4290-880f-5fc617acc993")
+		)
+		(embedded_fonts no)
+		(model "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0201_0603Metric.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+	)
+	(footprint "Capacitor_SMD:C_0201_0603Metric"
+		(layer "B.Cu")
+		(uuid "de8f209c-0677-48d8-8730-690f3b1eb164")
+		(at 134.93 87.64 180)
+		(descr "Capacitor SMD 0201 (0603 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: https://www.vishay.com/docs/20052/crcw0201e3.pdf)")
+		(tags "capacitor")
+		(property "Reference" "REF**"
+			(at 0 1.05 0)
+			(layer "B.SilkS")
+			(uuid "58f4e3df-55da-45aa-8e4c-66eaada657aa")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Value" "100n"
+			(at 0 -1.05 0)
+			(layer "B.Fab")
+			(uuid "e86b23c4-76e3-4de4-bd0b-dbf9ed818a4d")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "3529197b-703a-4dee-ae9d-072ccf0c887d")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "6ad59178-783b-44d5-8faa-534c84150f14")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify mirror)
+			)
+		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 0 0 0)
+			(layer "B.SilkS")
+			(hide yes)
+			(uuid "f42553ec-25c6-4ed4-9333-a2c894f14418")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Notes" "Capacitor, MLCC, 100n, M0603, 6.3V, 10%, X5R"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "b9d0a466-8d3e-42cb-9cbe-c5cfe840212e")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Source" "https://forums.raspberrypi.com/viewtopic.php?t=401457#p2391172"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "764dc2a5-810a-4cc3-99d5-2da9da6aca9e")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(attr smd)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_rect
+			(start -0.7 0.35)
+			(end 0.7 -0.35)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(fill no)
+			(layer "B.CrtYd")
+			(uuid "d3a8c27a-36fa-47ce-9181-6bf477ae8772")
+		)
+		(fp_rect
+			(start -0.3 0.15)
+			(end 0.3 -0.15)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(fill no)
+			(layer "B.Fab")
+			(uuid "bb385109-47e8-43a8-9d7a-9f895c9fc1b7")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0.68 0)
+			(layer "B.Fab")
+			(uuid "5f5b2f93-4dc4-492a-986d-f522c91f48fd")
+			(effects
+				(font
+					(size 0.25 0.25)
+					(thickness 0.04)
+				)
+				(justify mirror)
+			)
+		)
+		(pad "" smd roundrect
+			(at -0.345 0 180)
+			(size 0.318 0.36)
+			(layers "B.Paste")
+			(roundrect_rratio 0.25)
+			(uuid "18ad7c33-e7d9-42b6-8972-43e400ce64bd")
+		)
+		(pad "" smd roundrect
+			(at 0.345 0 180)
+			(size 0.318 0.36)
+			(layers "B.Paste")
+			(roundrect_rratio 0.25)
+			(uuid "44ba6633-589c-4acd-955d-c90eb21f9c55")
+		)
+		(pad "1" smd roundrect
+			(at -0.32 0 180)
+			(size 0.46 0.4)
+			(layers "B.Cu" "B.Mask")
+			(roundrect_rratio 0.25)
+			(uuid "d19e5f54-6fa4-4d54-9e79-d114af536ae6")
+		)
+		(pad "2" smd roundrect
+			(at 0.32 0 180)
+			(size 0.46 0.4)
+			(layers "B.Cu" "B.Mask")
+			(roundrect_rratio 0.25)
+			(uuid "e8ddb462-f3cf-4119-b8c2-6c86ed3da9da")
 		)
 		(embedded_fonts no)
 		(model "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0201_0603Metric.step"
@@ -50239,6 +50824,178 @@
 			)
 		)
 	)
+	(footprint "Capacitor_SMD:C_0201_0603Metric"
+		(layer "B.Cu")
+		(uuid "eff6ff02-9f2e-4b3c-a584-6b77a37963a6")
+		(at 132.35 87.57 180)
+		(descr "Capacitor SMD 0201 (0603 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: https://www.vishay.com/docs/20052/crcw0201e3.pdf)")
+		(tags "capacitor")
+		(property "Reference" "REF**"
+			(at 0 1.05 0)
+			(layer "B.SilkS")
+			(uuid "37034780-d995-4961-90af-cdeee9761a58")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Value" "100n"
+			(at 0 -1.05 0)
+			(layer "B.Fab")
+			(uuid "48f71782-e830-40ec-8991-86307d2206d7")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "c9a2b3b4-b68b-446d-b540-d50a87931882")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "ea3a1c58-8553-463c-9301-07ecf6426fbc")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify mirror)
+			)
+		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 0 0 0)
+			(layer "B.SilkS")
+			(hide yes)
+			(uuid "336f509a-0200-463e-bcf3-92019395455a")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Notes" "Capacitor, MLCC, 100n, M0603, 6.3V, 10%, X5R"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "e06863ea-3db4-4454-a5f0-54eec78bea0e")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Source" "https://forums.raspberrypi.com/viewtopic.php?t=401457#p2391172"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "6776cd9d-6b95-436d-a48b-4323925f5c9e")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(attr smd)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_rect
+			(start -0.7 0.35)
+			(end 0.7 -0.35)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(fill no)
+			(layer "B.CrtYd")
+			(uuid "dd700601-85c1-4eb4-8fe1-342d92fd1c8c")
+		)
+		(fp_rect
+			(start -0.3 0.15)
+			(end 0.3 -0.15)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(fill no)
+			(layer "B.Fab")
+			(uuid "e6dde365-64a3-4c11-89eb-2b6cd9ed6f24")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0.68 0)
+			(layer "B.Fab")
+			(uuid "22957053-cba0-4582-bdc9-c61e25f78521")
+			(effects
+				(font
+					(size 0.25 0.25)
+					(thickness 0.04)
+				)
+				(justify mirror)
+			)
+		)
+		(pad "" smd roundrect
+			(at -0.345 0 180)
+			(size 0.318 0.36)
+			(layers "B.Paste")
+			(roundrect_rratio 0.25)
+			(uuid "facda482-0f59-4324-b79f-3fe43e6d667f")
+		)
+		(pad "" smd roundrect
+			(at 0.345 0 180)
+			(size 0.318 0.36)
+			(layers "B.Paste")
+			(roundrect_rratio 0.25)
+			(uuid "2e30b9ae-e78e-45d8-9213-d17400bf3781")
+		)
+		(pad "1" smd roundrect
+			(at -0.32 0 180)
+			(size 0.46 0.4)
+			(layers "B.Cu" "B.Mask")
+			(roundrect_rratio 0.25)
+			(uuid "550030a4-bf39-4d89-9ae6-fb138e005e5f")
+		)
+		(pad "2" smd roundrect
+			(at 0.32 0 180)
+			(size 0.46 0.4)
+			(layers "B.Cu" "B.Mask")
+			(roundrect_rratio 0.25)
+			(uuid "17003002-bba7-40c3-bb60-dadf0e8ed3d9")
+		)
+		(embedded_fonts no)
+		(model "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0201_0603Metric.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+	)
 	(footprint "Capacitor_SMD:C_0402_1005Metric"
 		(layer "B.Cu")
 		(uuid "f0ec934f-748a-4b06-8b50-2f0d03b71aee")
@@ -51445,7 +52202,7 @@
 	(footprint "Capacitor_SMD:C_0402_1005Metric"
 		(layer "B.Cu")
 		(uuid "ff8057c5-ec8c-4fe2-a27c-4eb039359e6e")
-		(at 126.26 95.78 -90)
+		(at 126.18 95.88 -90)
 		(descr "Capacitor SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "capacitor")
 		(property "Reference" "REF**"
@@ -51502,6 +52259,34 @@
 			(layer "B.SilkS")
 			(hide yes)
 			(uuid "a4678b97-8641-4ba8-a29d-e09e8a1e6567")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Notes" "Capacitor, MLCC, 22u, M1608, 6.3V, 20%, X5R"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "eb8a6786-68d5-4adc-8f0d-2604452234ef")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Source" "https://forums.raspberrypi.com/viewtopic.php?t=401457#p2391172"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "ac066abb-1976-4a31-b72e-cdc2b82c6ec3")
 			(effects
 				(font
 					(size 1 1)
@@ -212948,6 +213733,110 @@
 		(net "VDD_1v1")
 		(uuid "eda14483-bd44-4f25-ad00-3638c78d41f4")
 	)
+	(segment
+		(start 109.3 87.46)
+		(end 109.3 87.680001)
+		(width 0.1)
+		(layer "B.Cu")
+		(net "SD_SW_DETECT")
+		(uuid "0bd5cd5d-968e-4b8d-93f6-a37b6b12e9a3")
+	)
+	(segment
+		(start 115.5 85.85)
+		(end 115.5 86.23)
+		(width 0.1)
+		(layer "B.Cu")
+		(net "SD_SW_DETECT")
+		(uuid "2a230652-d123-461e-869c-36337a707b63")
+	)
+	(segment
+		(start 115.11 86.23)
+		(end 114.03 85.15)
+		(width 0.1)
+		(layer "B.Cu")
+		(net "SD_SW_DETECT")
+		(uuid "2ab7ce6b-0c28-4801-b832-46502591eaeb")
+	)
+	(segment
+		(start 116.38 85.65)
+		(end 115.7 85.65)
+		(width 0.1)
+		(layer "B.Cu")
+		(net "SD_SW_DETECT")
+		(uuid "2c4f48fa-998a-45e1-9fb4-963f0f3ff351")
+	)
+	(segment
+		(start 115.7 85.65)
+		(end 115.5 85.85)
+		(width 0.1)
+		(layer "B.Cu")
+		(net "SD_SW_DETECT")
+		(uuid "604a9856-f12c-4a2b-ab2d-94461d409cc7")
+	)
+	(segment
+		(start 116.69 86.22)
+		(end 116.69 85.96)
+		(width 0.1)
+		(layer "B.Cu")
+		(net "SD_SW_DETECT")
+		(uuid "675787b0-fa89-4615-90cc-f1930fe0a25a")
+	)
+	(segment
+		(start 118.11 86.51)
+		(end 119.21 86.51)
+		(width 0.1)
+		(layer "B.Cu")
+		(net "SD_SW_DETECT")
+		(uuid "7427d348-ed93-4bf0-b31f-7041e4b3f72e")
+	)
+	(segment
+		(start 117.33 86.22)
+		(end 117.82 86.22)
+		(width 0.1)
+		(layer "B.Cu")
+		(net "SD_SW_DETECT")
+		(uuid "77604440-9c5a-4f39-9347-e543c2f456d3")
+	)
+	(segment
+		(start 115.51 86.23)
+		(end 115.11 86.23)
+		(width 0.1)
+		(layer "B.Cu")
+		(net "SD_SW_DETECT")
+		(uuid "988da5df-e5c6-4aeb-ad2b-79732b6500ea")
+	)
+	(segment
+		(start 111.61 85.15)
+		(end 109.3 87.46)
+		(width 0.1)
+		(layer "B.Cu")
+		(net "SD_SW_DETECT")
+		(uuid "c2055f8e-329b-4962-bd11-25526394b4cc")
+	)
+	(segment
+		(start 114.03 85.15)
+		(end 111.61 85.15)
+		(width 0.1)
+		(layer "B.Cu")
+		(net "SD_SW_DETECT")
+		(uuid "c5a221a1-22be-4aac-9e2e-d305cbb9698e")
+	)
+	(segment
+		(start 116.69 85.96)
+		(end 116.38 85.65)
+		(width 0.1)
+		(layer "B.Cu")
+		(net "SD_SW_DETECT")
+		(uuid "dd48d163-4244-454f-9e03-4acb8c92e88f")
+	)
+	(segment
+		(start 117.82 86.22)
+		(end 118.11 86.51)
+		(width 0.1)
+		(layer "B.Cu")
+		(net "SD_SW_DETECT")
+		(uuid "ea9fbe0e-f6ce-44c1-9481-cea62d12bfa3")
+	)
 	(via
 		(at 105.9 116.47)
 		(size 0.4)
@@ -213316,110 +214205,6 @@
 		(layer "B.Cu")
 		(net "TBD2")
 		(uuid "c8d14a36-65cd-46cf-bd96-c8364368218f")
-	)
-	(segment
-		(start 109.3 87.46)
-		(end 109.3 87.680001)
-		(width 0.1)
-		(layer "B.Cu")
-		(net "SD_SW_DETECT")
-		(uuid "0bd5cd5d-968e-4b8d-93f6-a37b6b12e9a3")
-	)
-	(segment
-		(start 115.5 85.85)
-		(end 115.5 86.23)
-		(width 0.1)
-		(layer "B.Cu")
-		(net "SD_SW_DETECT")
-		(uuid "2a230652-d123-461e-869c-36337a707b63")
-	)
-	(segment
-		(start 115.11 86.23)
-		(end 114.03 85.15)
-		(width 0.1)
-		(layer "B.Cu")
-		(net "SD_SW_DETECT")
-		(uuid "2ab7ce6b-0c28-4801-b832-46502591eaeb")
-	)
-	(segment
-		(start 116.38 85.65)
-		(end 115.7 85.65)
-		(width 0.1)
-		(layer "B.Cu")
-		(net "SD_SW_DETECT")
-		(uuid "2c4f48fa-998a-45e1-9fb4-963f0f3ff351")
-	)
-	(segment
-		(start 115.7 85.65)
-		(end 115.5 85.85)
-		(width 0.1)
-		(layer "B.Cu")
-		(net "SD_SW_DETECT")
-		(uuid "604a9856-f12c-4a2b-ab2d-94461d409cc7")
-	)
-	(segment
-		(start 116.69 86.22)
-		(end 116.69 85.96)
-		(width 0.1)
-		(layer "B.Cu")
-		(net "SD_SW_DETECT")
-		(uuid "675787b0-fa89-4615-90cc-f1930fe0a25a")
-	)
-	(segment
-		(start 118.11 86.51)
-		(end 119.21 86.51)
-		(width 0.1)
-		(layer "B.Cu")
-		(net "SD_SW_DETECT")
-		(uuid "7427d348-ed93-4bf0-b31f-7041e4b3f72e")
-	)
-	(segment
-		(start 117.33 86.22)
-		(end 117.82 86.22)
-		(width 0.1)
-		(layer "B.Cu")
-		(net "SD_SW_DETECT")
-		(uuid "77604440-9c5a-4f39-9347-e543c2f456d3")
-	)
-	(segment
-		(start 115.51 86.23)
-		(end 115.11 86.23)
-		(width 0.1)
-		(layer "B.Cu")
-		(net "SD_SW_DETECT")
-		(uuid "988da5df-e5c6-4aeb-ad2b-79732b6500ea")
-	)
-	(segment
-		(start 111.61 85.15)
-		(end 109.3 87.46)
-		(width 0.1)
-		(layer "B.Cu")
-		(net "SD_SW_DETECT")
-		(uuid "c2055f8e-329b-4962-bd11-25526394b4cc")
-	)
-	(segment
-		(start 114.03 85.15)
-		(end 111.61 85.15)
-		(width 0.1)
-		(layer "B.Cu")
-		(net "SD_SW_DETECT")
-		(uuid "c5a221a1-22be-4aac-9e2e-d305cbb9698e")
-	)
-	(segment
-		(start 116.69 85.96)
-		(end 116.38 85.65)
-		(width 0.1)
-		(layer "B.Cu")
-		(net "SD_SW_DETECT")
-		(uuid "dd48d163-4244-454f-9e03-4acb8c92e88f")
-	)
-	(segment
-		(start 117.82 86.22)
-		(end 118.11 86.51)
-		(width 0.1)
-		(layer "B.Cu")
-		(net "SD_SW_DETECT")
-		(uuid "ea9fbe0e-f6ce-44c1-9481-cea62d12bfa3")
 	)
 	(zone
 		(net "VDD_1v1")
