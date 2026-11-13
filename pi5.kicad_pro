@@ -469,6 +469,7 @@
       "pin_to_pin": "warning",
       "power_pin_not_driven": "error",
       "same_local_global_label": "warning",
+      "same_local_global_power": "warning",
       "similar_label_and_power": "warning",
       "similar_labels": "warning",
       "similar_power": "warning",
@@ -663,13 +664,18 @@
       {
         "filename": "pi5.kicad_sch",
         "name": "pi5",
-        "uuid": "00000000-0000-0000-0000-000000000000"
+        "uuid": "207d783f-30ef-42ab-baad-00f785858da5"
       }
     ],
-    "used_designators": "",
+    "used_designators": "TP1,FB1,FB3,FB9002-9004,C1,C82-83,C90-91,C94,C103,C115-116,C122,C129,R1,R62,R64,R66,R71",
     "variants": []
   },
-  "sheets": [],
+  "sheets": [
+    [
+      "207d783f-30ef-42ab-baad-00f785858da5",
+      "pi5"
+    ]
+  ],
   "text_variables": {},
   "tuning_profiles": {
     "meta": {
