@@ -1,0 +1,8 @@
+# Boardview settings for dpetzel/kicad-boardview
+title = "Raspberry Pi 5"
+repo = "https://github.com/dpetzel/pi5-boardview"
+
+# Disclaimer shown in the viewer (and on the landing page)
+[notice]
+maker = "Raspberry Pi Ltd"
+trademark = "Raspberry Pi"

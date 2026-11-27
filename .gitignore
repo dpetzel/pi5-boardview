@@ -10,7 +10,8 @@ pi5-backups/
 _restore_backup_*/
 .history/
 
-# Generated boardview (built by CI: GitHub Pages + release assets; locally: tools/boardview.py)
+# Generated boardview (built by CI with dpetzel/kicad-boardview: GitHub Pages)
+_site/
 boardview/*.html
 boardview/*.brd
 __pycache__/

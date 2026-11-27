@@ -1,4 +1,4 @@
-# Builds the boardview (HTML viewer + OpenBoardView .brd) from pi5.kicad_pcb.
+# Builds the boardview (HTML viewer + OpenBoardView .brd) with dpetzel/kicad-boardview; settings in boardview.toml.
 #   pull request  -> files attached to the run as the "boardview" artifact, for review
 #   push to main  -> deployed to GitHub Pages
 name: boardview
@@ -13,42 +13,10 @@ concurrency:
   group: boardview-${{ github.ref }}
   cancel-in-progress: true
 
-permissions:
-  contents: read
-
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    container:
-      image: kicad/kicad:10.0
-      options: --user root
-    steps:
-      - uses: actions/checkout@v7
-      - name: Export boardview
-        run: |
-          python3 tools/boardview.py pi5.kicad_pcb -o _site
-          cp _site/pi5-boardview.html _site/index.html
-      - uses: actions/upload-artifact@v7
-        with:
-          name: boardview
-          path: |
-            _site/pi5-boardview.html
-            _site/pi5.brd
-      - if: github.ref == 'refs/heads/main'
-        uses: actions/upload-pages-artifact@v5
-        with:
-          path: _site
-
-  deploy:
-    if: github.ref == 'refs/heads/main'
-    needs: build
-    runs-on: ubuntu-latest
+  boardview:
+    uses: dpetzel/kicad-boardview/.github/workflows/boardview.yml@main
     permissions:
+      contents: read
       pages: write
       id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - id: deployment
-        uses: actions/deploy-pages@v5
